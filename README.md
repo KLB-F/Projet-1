@@ -3,7 +3,9 @@ Projet n°1 : Lié à mon TIPE
 
 Contexte : mon TIPE porte sur la modélisation d'un panneau solaire et de sa commande à l'aide d'un hacheur BOOST
 
-Dépendances : pvlib, numpy, matplotlib, scipy
+Dépendances : 
+  Python : pvlib, numpy, matplotlib, scipy
+  Arduino : Wire, floatToString, DFRobot_INA219
 
 Contenue : 
 
@@ -22,3 +24,14 @@ Contenue :
 
   TestModele.py : 
     Fichier permettant de déterminer le meilleur modèle parmi 2 proposés.
+
+  Arduino_CommHacheur.ino : 
+    Code injecter dans l'arduino lié au fichier CommHacheur.py
+    Calcule et applique le rapport cyclique a selon l'algorithme PAO.
+    De plus, il prend en entré la tension et la puissance issue d'un multimètre.
+
+  Arduino_CommSimulation.ino : 
+    Code injecter dans l'arduino pour fonctionner avec le fichier CommSimulation.py.
+    Il renvoie le rapport cyclique a obtenue grâce à l'algorithme PAO et analyse les entrées issuent de python.
+  
+    
